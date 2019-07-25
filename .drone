@@ -1,0 +1,52 @@
+kind: pipeline
+name: OTA Automation
+steps:
+- name: generic
+  image: jarlpenguin/otascripts:latest
+  environment:
+    GITHUB_TOKEN:
+      from_secret: GITHUB_TOKEN
+  commands:
+  - bash ./start.sh generic
+- name: klimtlte
+  image: jarlpenguin/otascripts:latest
+  environment:
+    GITHUB_TOKEN:
+      from_secret: GITHUB_TOKEN
+  commands:
+  - bash ./start.sh klimtlte
+- name: klimttd
+  image: jarlpenguin/otascripts:latest
+  environment:
+    GITHUB_TOKEN:
+      from_secret: GITHUB_TOKEN
+  commands:
+  - bash ./start.sh klimttd
+- name: klimtwifi
+  image: jarlpenguin/otascripts:latest
+  environment:
+    GITHUB_TOKEN:
+      from_secret: GITHUB_TOKEN
+  commands:
+  - bash ./start.sh klimtwifi
+- name: chagalllte
+  image: jarlpenguin/otascripts:latest
+  environment:
+    GITHUB_TOKEN:
+      from_secret: GITHUB_TOKEN
+  commands:
+  - bash ./start.sh chagalllte
+- name: chagallltetmo
+  image: jarlpenguin/otascripts:latest
+  environment:
+    GITHUB_TOKEN:
+      from_secret: GITHUB_TOKEN
+  commands:
+  - bash ./start.sh chagallltetmo
+- name: chagallwifi
+  image: jarlpenguin/otascripts:latest
+  environment:
+    GITHUB_TOKEN:
+      from_secret: GITHUB_TOKEN
+  commands:
+  - bash ./start.sh chagallwifi

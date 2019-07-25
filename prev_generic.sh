@@ -1,0 +1,3 @@
+export prev_md5sum=fb42b50254d61524e4caf4700df71cce
+export prev_size=314572800
+export prev_builddate=1230764400
